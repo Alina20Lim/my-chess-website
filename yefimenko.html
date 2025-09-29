@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Єфименко Захар - Українські шахісти</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1, h2, h3 {
+            color: #0057b7;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        nav {
+            background-color: #0057b7;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .logo-img {
+            width: 70px;
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin: 0 15px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+        
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f5f5f5;
+            color: #0057b7;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .player-detail {
+            display: flex;
+            gap: 40px;
+            margin: 40px 0;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .player-photo {
+            flex: 0 0 400px;
+        }
+        
+        .player-photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        .player-bio {
+            flex: 1;
+        }
+        
+        .player-achievements {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .player-achievements ul {
+            padding-left: 20px;
+        }
+        
+        .player-achievements li {
+            margin-bottom: 10px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #0057b7;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background-color: #0057b7;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #ccc;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            color: #ffd700;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #ccc;
+        }
+        
+        @media (max-width: 768px) {
+            .player-detail {
+                flex-direction: column;
+            }
+            
+            .player-photo {
+                flex: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/shahu.png" alt="Логотип" class="logo-img">
+                <span>Українські шахісти</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Головна</a></li>
+                <li class="dropdown">
+                    <a href="#">Шахісти ▾</a>
+                    <div class="dropdown-content">
+                        <a href="volokitin.html">Волокитін Андрій</a>
+                        <a href="degtyarev.html">Дегтярьов Роман</a>
+                        <a href="yefimenko.html">Єфименко Захар</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Шахістки ▾</a>
+                    <div class="dropdown-content">
+                        <a href="buksa.html">Букса Наталія</a>
+                        <a href="malakhova.html">Малахова Єлизавета</a>
+                        <a href="osmak.html">Осьмак Юлія</a>
+                        <a href="rakhmanhulova.html">Рахмангулова Анастасія</a>
+                        <a href="toroptseva.html">Торопцева Євгенія</a>
+                    </div>
+                </li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Єфименко Захар Олександрович</h1>
+        
+        <div class="player-detail">
+            <div class="player-photo">
+                <img src="images/8.png" alt="Єфименко Захар">
+            </div>
+            
+            <div class="player-bio">
+                <h2>Біографія</h2>
+                <p>Захар Олександрович Єфименко — нар. 3 липня 1985, м. Макіївка, український шахіст, заслужений майстер спорту, гросмейстер.</p>
+                <p>Чемпіон України 2006 року. У складі збірної України переможець шахової олімпіади 2010 року.</p>
+                <p>Його рейтинг станом на березень 2020 року — 2602 (231-ше місце у світі, 17-те в Україні).</p>
+                
+                <div class="player-achievements">
+                    <h3>Досягнення</h3>
+                    <ul>
+                        <li>1994 р. — Його тренували найвидатніші тренери України з шахів Мосеєнко-Атремишин Іван Зеновійович і Прокіп Захар Володимирович. У лютому 1995 року прийшов перший успіх — на чемпіонаті області серед чоловіків виконав норматив кандидата в майстри спорту (8-9 місце).</li>
+                        <li>2001 рік — у складі збірної України здобув «золото» на ІІ-й першості Європи серед молодіжних національних команд (до 18 років), що проходила в угорському місті Балатонлелле. У цьому році під № 5 він входив до символічного списку «10 найкращих шахістів України» (до 16 років).</li>
+                        <li>2006 рік — чемпіон України.</li>
+                        <li>2010 рік — переможець 39-ї всесвітньої шахової олімпіади (2010) в складі збірної України.</li>
+                        <li>2016 рік — розподіл 2 — 6 місць на турнірі «XXXV Zalakaros Chess Festival HUN Open».</li>
+                        <li>та інші.</li>
+                    </ul>
+                </div>
+                
+                <a href="index.html" class="back-link">← Назад до головної сторінки</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Про сайт</h3>
+                    <p>Сайт присвячений відомим українським шахістам.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакти</h3>
+                    <p>Email: alinadolganyuk@gmail.com</p>
+                    <p>Адреса: м. Вінниця вул. Хмельницьке шосе 95 </p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Відомі шахісти України</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
